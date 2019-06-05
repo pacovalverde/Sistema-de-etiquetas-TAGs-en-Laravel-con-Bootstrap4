@@ -1,0 +1,16 @@
+
+composer create-project laravel/laravel tags 5.5.*
+
+composer require rtconner/laravel-tagging
+
+php artisan make:model Post -mc
+
+php artisan vendor:publish
+    [ Select option 1 ]
+
+php artisan migrate
+
+php artisan tagging:create-group Backend
+php artisan tagging:create-group Frontend
+
+php artisan make:request PostRequest
